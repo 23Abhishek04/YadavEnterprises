@@ -193,6 +193,15 @@ const samplee = () => {
         </motion.div>
       </div>
 
+      <div className="w-full h-[100px] flex items-center justify-center ">
+        <div className="md:w-[1250px] h-full ">
+          <h1 className="font-serif text-2xl font-semibold text-[#6F4E37]">Testimonial</h1>
+          <h1 className="mb-3 text-4xl font-bold  md:mb-5 md:text-5xl text-[#5C4033]">
+            What Our Client Says
+          </h1>
+        </div>
+      </div>
+
       <div className="flex items-center justify-center w-full md:h-[1000px] relative">
         <div className="py-10 md:[1350px] md:h-[1000px] md:px-20 w-full px-10">
           <Swiper
@@ -208,7 +217,6 @@ const samplee = () => {
             }}
             loop={true}
           >
-            
             <SwiperSlide>
               <motion.div
                 className="md:h-[900px] md:w-[400px] md:flex md:flex-col w-full h-[500px] text-[#5C4033]"
@@ -395,7 +403,7 @@ const samplee = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                 <div
+                  <div
                     className="flex items-center justify-center w-32 mb-4 text-black bg-transparent h-36"
                     style={{
                       clipPath:
@@ -461,7 +469,6 @@ const samplee = () => {
                 </motion.div>
               </motion.div>
             </SwiperSlide>
-            
           </Swiper>
         </div>
       </div>

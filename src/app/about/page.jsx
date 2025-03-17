@@ -1,30 +1,34 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import dynamic from 'next/dynamic';
 import bg from "../imagess/bgimage.jpg";
 import ab from "../imagess/ab1.jpg";
 import abb from "../imagess/ab2.jpg";
 import a from "../imagess/ab3.jpg";
-import { motion } from "framer-motion";
-import { Printer, Brush, Headphones } from "lucide-react";
 
-const page = () => {
+// Dynamically importing framer-motion's motion.div
+const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false });
+
+// Dynamically importing lucide-react icons
+const Printer = dynamic(() => import('lucide-react').then(mod => mod.Printer), { ssr: false });
+
+const Page = () => {
   return (
     <div className="w-full h-full">
-      <div className="relative inset-0 w-full h-[190px] md:h-[400px] -z-20 ">
+      <div className="relative inset-0 w-full h-[190px] md:h-[400px] -z-20">
         <Image
           src={bg}
           alt="Background"
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={100}
           priority
-          className="opacity-60"
+          className="object-cover opacity-60"
         />
         <div className="absolute inset-0 w-full h-full bg-black opacity-70"></div>
 
         {/* Overlay Layer */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-[#FFD700] ">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-[#FFD700]">
           <span className="text-2xl font-bold md:text-5xl">ABOUT</span>
           <span>
             <span className="text-base text-white md:text-3xl"> Home /</span>
@@ -33,9 +37,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className="md:h-[600px] md:w-full md:flex ">
+      <div className="md:h-[600px] md:w-full md:flex">
         <div className="px-5 md:w-1/2 md:flex md:items-center md:relative md:justify-center md:px-0">
-        <motion.div
+          <MotionDiv
             animate={{ x: [0, 20, 0], y: [0, 20, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             className="absolute w-full h-full -z-20"
@@ -46,14 +50,13 @@ const page = () => {
               fill
               quality={100}
               priority
-              className="absolute -z-20"
+              className="absolute object-cover -z-20"
             />
-          </motion.div>
+          </MotionDiv>
 
           <Image
             src={ab}
             alt="Background"
-            objectFit="cover"
             quality={100}
             priority
             className="md:h-[250px] md:absolute md:w-auto md:mt-56 md:mr-60 h-[300px] w-full rounded-2xl md:my-0 my-5"
@@ -61,7 +64,6 @@ const page = () => {
           <Image
             src={abb}
             alt="Background"
-            objectFit="cover"
             quality={100}
             className="md:h-[350px] md:w-auto md:mb-40 md:ml-40 h-[300px] w-full rounded-2xl mb-5"
             priority
@@ -78,55 +80,40 @@ const page = () => {
             signage. With a steadfast dedication to quality and customer
             satisfaction, we offer a diverse range of services tailored to meet
             your needs.
-          </p>{" "}
+          </p>
           <p className="mb-4 text-gray-500 md:text-xl md:mb-7">
             No matter the size or scope of your project, you can trust Monica
             Arts to deliver exceptional results. With our commitment to quality
             and attention to detail, we strive to exceed your expectations every
             step of the way.
-          </p>{" "}
+          </p>
           <p className="mb-4 text-gray-500 md:text-xl">
             Thank you for choosing Monica Arts as your trusted partner. We look
             forward to serving you!
           </p>
         </div>
       </div>
-      <div className="md:items-center md:flex md:justify-evenly md:h-[300px] md:w-full md:gap-10 md:px-20 ">
-        <div className="md:h-[250px] md:w-[500px] md:flex md:items-center h-[100px] w-full flex px-5 py-2 md:mb-0 mb-5">
-          <Printer className="w-20 h-20 mr-3 text-red-500 md:h-20 md:mr-4 md:w-20" />
-          <span className="flex flex-col ml-2 md:flex-col md:flex">
-            <a className="text-2xl font-bold ">Printing Services</a>
-            <a className="mt-1 text-base md:text-base md:mt-2">
-              There are many variations of passages lorem Ipsum available the
-              majority have some form by injected.
-            </a>
-          </span>
-        </div>
 
-        <div className="md:h-[250px] md:w-[500px] md:flex md:items-center h-[100px] w-full flex px-5 py-2 md:mb-0 mb-5">
-          <Printer className="w-20 h-20 mr-3 text-red-500 md:h-20 md:mr-4 md:w-20" />
-          <span className="flex flex-col ml-2 md:flex-col md:flex">
-            <a className="text-2xl font-bold ">Design & Branding</a>
-            <a className="mt-1 text-base md:text-base md:mt-2">
-              There are many variations of passages lorem Ipsum available the
-              majority have some form by injected.
-            </a>
-          </span>
-        </div>
-
-        <div className="md:h-[250px] md:w-[500px] md:flex md:items-center h-[100px] w-full flex px-5 py-2 md:mb-0 mb-5">
-          <Printer className="w-20 h-20 mr-3 text-red-500 md:h-20 md:mr-4 md:w-20" />
-          <span className="flex flex-col ml-2 md:flex-col md:flex">
-            <a className="text-2xl font-bold ">Best Online Support</a>
-            <a className="mt-1 text-base md:text-base md:mt-2">
-              There are many variations of passages lorem Ipsum available the
-              majority have some form by injected.
-            </a>
-          </span>
-        </div>
+      <div className="md:items-center md:flex md:justify-evenly md:h-[300px] md:w-full md:gap-10 md:px-20">
+        {[
+          { title: "Printing Services", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." },
+          { title: "Design & Branding", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." },
+          { title: "Best Online Support", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." }
+        ].map((service, index) => (
+          <div
+            key={index}
+            className="md:h-[250px] md:w-[500px] md:flex md:items-center h-[100px] w-full flex px-5 py-2 md:mb-0 mb-5"
+          >
+            <Printer className="w-20 h-20 mr-3 text-red-500 md:h-20 md:mr-4 md:w-20" />
+            <span className="flex flex-col ml-2 md:flex-col md:flex">
+              <a className="text-2xl font-bold">{service.title}</a>
+              <a className="mt-1 text-base md:text-base md:mt-2">{service.description}</a>
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

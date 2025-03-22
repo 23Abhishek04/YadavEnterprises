@@ -1,17 +1,12 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import dynamic from 'next/dynamic';
+import { motion } from "framer-motion";
+import { Printer } from "lucide-react";
 import bg from "../imagess/bgimage.jpg";
 import ab from "../imagess/ab1.jpg";
 import abb from "../imagess/ab2.jpg";
 import a from "../imagess/ab3.jpg";
-
-// Dynamically importing framer-motion's motion.div
-const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false });
-
-// Dynamically importing lucide-react icons
-const Printer = dynamic(() => import('lucide-react').then(mod => mod.Printer), { ssr: false });
 
 const Page = () => {
   return (
@@ -39,7 +34,7 @@ const Page = () => {
 
       <div className="md:h-[600px] md:w-full md:flex">
         <div className="px-5 md:w-1/2 md:flex md:items-center md:relative md:justify-center md:px-0">
-          <MotionDiv
+          <motion.div
             animate={{ x: [0, 20, 0], y: [0, 20, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             className="absolute w-full h-full -z-20"
@@ -52,7 +47,7 @@ const Page = () => {
               priority
               className="absolute object-cover -z-20"
             />
-          </MotionDiv>
+          </motion.div>
 
           <Image
             src={ab}
@@ -96,19 +91,19 @@ const Page = () => {
 
       <div className="md:items-center md:flex md:justify-evenly md:h-[300px] md:w-full md:gap-10 md:px-20">
         {[
-          { title: "Printing Services", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." },
-          { title: "Design & Branding", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." },
-          { title: "Best Online Support", description: "There are many variations of passages lorem Ipsum available the majority have some form by injected." }
+          { title: "Printing Services", description: "High-quality custom printing solutions to meet all your needs." },
+          { title: "Design & Branding", description: "Creative designs and branding services for impactful visuals." },
+          { title: "Best Online Support", description: "Reliable and efficient support whenever you need assistance." }
         ].map((service, index) => (
           <div
             key={index}
             className="md:h-[250px] md:w-[500px] md:flex md:items-center h-[100px] w-full flex px-5 py-2 md:mb-0 mb-5"
           >
             <Printer className="w-20 h-20 mr-3 text-red-500 md:h-20 md:mr-4 md:w-20" />
-            <span className="flex flex-col ml-2 md:flex-col md:flex">
-              <a className="text-2xl font-bold">{service.title}</a>
-              <a className="mt-1 text-base md:text-base md:mt-2">{service.description}</a>
-            </span>
+            <div className="flex flex-col ml-2">
+              <span className="text-2xl font-bold">{service.title}</span>
+              <span className="mt-1 text-base text-gray-600">{service.description}</span>
+            </div>
           </div>
         ))}
       </div>

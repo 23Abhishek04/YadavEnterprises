@@ -16,10 +16,9 @@ const images = [
   "/images/img5.png",
 ];
 
-
 const HeroSection = () => {
   return (
-    <div className="md:w-full overflow-hidden h-[230px] md:h-[850px] w-full">
+    <div className="w-full h-[230px] md:h-[850px] overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={10}
@@ -36,6 +35,7 @@ const HeroSection = () => {
                 src={src}
                 alt={`Slide ${index + 1}`}
                 fill
+                sizes="100vw"
                 className="object-cover"
                 priority={index === 0}
               />

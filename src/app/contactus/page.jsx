@@ -5,7 +5,13 @@ import Image from "next/image";
 import bg from "../imagess/bgimage.jpg";
 import bgg from "../imagess/bgcontact.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import dynamic from "next/dynamic";
+
+const MapContainer = dynamic(() => import("react-leaflet").then(mod => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import("react-leaflet").then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import("react-leaflet").then(mod => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import("react-leaflet").then(mod => mod.Popup), { ssr: false });
+
 import {
   faPhone,
   faEnvelope,

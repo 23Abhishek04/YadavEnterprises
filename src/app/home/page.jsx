@@ -1,3 +1,4 @@
+'use client';
 import Hero from '@/components/Hero';
 import HeroSection from '@/components/HeroSection';
 import Heroo from '@/components/Heroo';
@@ -8,7 +9,7 @@ import Clientsay from '@/components/Clientsay';
 import Sample from '@/components/sample';
 import Samplee from '@/components/samplee';
 
-const page = () => {
+const home = () => {
   return (
     <main>
       <HeroSection/>
@@ -24,4 +25,4 @@ const page = () => {
 );
 }
 
-export default page
+export default home

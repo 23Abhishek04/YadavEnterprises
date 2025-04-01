@@ -81,7 +81,7 @@ export default function Navbar() {
 
           <div className="items-center hidden w-full h-full text-lg font-bold text-white md:flex justify-evenly">
             <Link
-              href="/home"
+              href="/"
               className="hover:text-[#D4AF37] transition-colors duration-200"
             >
               HOME

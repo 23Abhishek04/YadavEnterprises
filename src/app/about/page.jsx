@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ import ab from "../imagess/ab1.jpg";
 import abb from "../imagess/ab2.jpg";
 import a from "../imagess/ab3.jpg";
 
-const Page = () => {
+const about = () => {
   return (
     <div className="w-full h-full">
       <div className="relative inset-0 w-full h-[190px] md:h-[400px] -z-20">
@@ -111,4 +111,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default about;

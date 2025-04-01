@@ -1,20 +1,30 @@
-import React from "react";
+'use client';
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import bg from "../imagess/bgimage.jpg";
-const images = Array.from({ length: 20 }, (_, i) => `/images/img${i + 1}.jpg`);
 
-export default function page() {
+// Use state to load images only on the client-side
+const gallery = () => {
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Ensure images are only loaded on the client-side
+      const loadedImages = Array.from({ length: 20 }, (_, i) => `/images/img${i + 1}.jpg`);
+      setImages(loadedImages);
+    }
+  }, []);
+
   return (
     <div className="w-full h-full ">
       <div className="relative inset-0 w-full h-[190px] md:h-[400px] -z-20">
         <Image
           src={bg}
           alt="Background"
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={100}
           priority
-          className="opacity-60"
+          className="object-cover opacity-60"
         />
         <div className="absolute inset-0 w-full h-full bg-black opacity-70"></div>
 
@@ -23,13 +33,11 @@ export default function page() {
           <span className="text-2xl font-semibold md:text-5xl">GALLERY</span>
           <span>
             <span className="text-base text-white md:text-3xl"> Home /</span>
-            <span className="text-base font-semibold md:text-3xl">
-              {" "}
-              Gallery
-            </span>
+            <span className="text-base font-semibold md:text-3xl"> Gallery</span>
           </span>
         </div>
       </div>
+
       <div className="min-h-screen px-4 py-10 bg-gray-100">
         <div className="max-w-6xl mx-auto text-center">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
@@ -52,4 +60,6 @@ export default function page() {
       </div>
     </div>
   );
-}
+};
+
+export default gallery;

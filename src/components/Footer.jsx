@@ -1,92 +1,96 @@
-'use client';
-
-import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import "leaflet/dist/leaflet.css";
+import React from "react";
 import Image from "next/image";
-import logo from "./assets/LOGOpng.png";
-import logoo from "./assets/weblogo.png";
-import footerbg from "./assets/footerbg.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faMapMarkerAlt,
-} from "@fortawesome/free-solid-svg-icons";
-
-const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
-const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
+import Link from 'next/link';
+import logo from "./assets/logo.png";
+import i from "./assets/in.png";
+import f from "./assets/fb.png";
+import p from "./assets/pin.png";
+import y from "./assets/yt.png";
 
 const Footer = () => {
-  const position = [18.6329882978488, 73.83814076428382];
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   return (
-    <footer className="relative w-full h-auto text-gray-500 ">
-      <div className="absolute inset-0 -z-10">
+    <div>
+      <div className="w-full border h-auto bg-[#333333] text-white flex flex-col px-7 py-5">
         <Image
-          src={footerbg}
+          src={logo}
           alt="Background"
-          fill
-          className="object-cover opacity-80"
           quality={100}
+          className="w-[180px] h-[100px] "
         />
-        <div className="absolute inset-0 bg-black opacity-80"></div>
-      </div>
-      <div className="relative z-20 flex flex-col w-full h-auto px-5 pt-10 pb-10 md:flex-row md:pr-10 justify-evenly">
-        <div className="flex items-center justify-center w-auto pb-10 md:pb-32">
-          <Image src={logo} alt="logo" width={200} height={200} />
+        <div className="flex gap-5 mt-5">
+        <Link href="https://www.instagram.com/"><Image
+            src={i}
+            alt="Background"
+            quality={100}
+            className="w-[30px] h-[30px]"
+          /></Link>
+          <Link href="https://www.facebook.com/"><Image
+            src={f}
+            alt="Background"
+            quality={100}
+            className="w-[30px] h-[30px]"
+          /></Link>
+          <Link href="https://www.pinterest.com/"><Image
+            src={p}
+            alt="Background"
+            quality={100}
+            className="w-[30px] h-[30px]"
+          /></Link>
+          <Link href="https://www.youtube.com/"><Image
+            src={y}
+            alt="Background"
+            quality={100}
+            className="w-[30px] h-[30px]"
+          /></Link>
         </div>
-        <nav className="w-full md:w-[300px] flex flex-col gap-4 p-5">
-          <h2 className="text-2xl font-bold text-white md:text-3xl">Our Products</h2>
-          <a className="text-base font-medium md:text-lg">Sign Board</a>
-          <a className="text-base font-medium md:text-lg">Metal Name Plates</a>
-          <a className="text-base font-medium md:text-lg">ACP Signages</a>
-          <a className="text-base font-medium md:text-lg">Name Boards</a>
-          <a className="text-base font-medium md:text-lg">Vinyl Paintings</a>
-          <a className="text-base font-medium md:text-lg">Totem Paintings</a>
-        </nav>
-        <address className="w-full md:w-[300px] p-5 gap-4 flex flex-col not-italic">
-          <h2 className="text-2xl font-bold text-white md:text-3xl">Contact Info</h2>
-          <p className="flex items-center gap-5 text-base font-medium md:text-lg">
-            <FontAwesomeIcon icon={faPhone} className="h-5" />
-            <a href="tel:+919822880200" className="hover:text-gray-300">+91 9822880200</a>
-          </p>
-          <p className="flex items-center gap-5 text-base font-medium md:text-lg">
-            <FontAwesomeIcon icon={faEnvelope} className="h-5" />
-            <a href="mailto:mail.com" className="hover:text-gray-300">MonicaArts.com</a>
-          </p>
-          <p className="flex items-start gap-5 text-base font-medium md:text-lg">
-            <FontAwesomeIcon icon={faMapMarkerAlt} className="h-16 mt-1 md:h-20" />
-            Indrayani Nagar Rd, S Block, MIDC, Bhosari, Pimpri-Chinchwad, Maharashtra 411026
-          </p>
-        </address>
-        <div className="w-full md:w-[300px] flex flex-col p-5 ">
-          <h2 className="mb-5 text-2xl font-bold text-white md:text-3xl">Location</h2>
-          <div className="flex justify-center w-full md:w-[300px]">
-            {isClient && (
-              <MapContainer center={position} zoom={15} className="w-full rounded-lg shadow-lg h-60">
-                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                <Marker position={position}>
-                  <Popup>We are here!</Popup>
-                </Marker>
-              </MapContainer>
-            )}
-          </div>
+
+        <h1 className="mt-5 mb-5 text-xl font-semibold">IMPORTANT LINKS</h1>
+        <div className="flex flex-col gap-1">
+          <a className="text-sm">About Us</a>
+          <a className="text-sm">Contact us</a>
+          <a className="text-sm">Living Room design ideas</a>
+          <a className="text-sm">Bedroom design ideas</a>
+          <a className="text-sm">Kitchen design ideas</a>
+          <a className="text-sm">Wardrobe Design Ideas</a>
+          <a className="text-sm">Pooja Room Design Ideas</a>
+          <a className="text-sm">Blogs</a>
+        </div>
+
+        <h1 className="mt-5 mb-5 text-xl font-semibold">ADDRESS</h1>
+
+        <p className="text-sm">
+          Shop No. 6, ARUN PARK, S.No.33/3, near, Aditya Birla Hospital Marg,
+          Datta Nagar, Thergaon, PUNE, Maharashtra 411033
+        </p>
+
+        <h1 className="mt-5 mb-5 text-xl font-semibold">OUR OTHER BRANDS</h1>
+        <div className="flex flex-col gap-1">
+          <a className="text-sm">Life2Home</a>
+          <a className="text-sm">Fabshades</a>
+        </div>
+
+        <h1 className="mt-5 mb-5 text-xl font-semibold">BUSINESS HOURS</h1>
+        <div className="flex flex-col gap-1">
+          <a className="text-sm">MON :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">TUE :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">WED :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">THU :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">FRI :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">SAT :- 9:30AM TO 7:00 PM</a>
+          <a className="text-sm">SUN :- Closed</a>
         </div>
       </div>
-      <div className="bottom-0 z-20 flex flex-col items-center justify-center w-full py-3 font-semibold border-t-2 bg-opacity-80">
-        <p>© 2024 Balaji Art's. All Rights Reserved.</p>
-        <p>Designed & Developed By:</p>
-        <Image src={logoo} alt="logo" width={150} height={100} className="mt-2" />
+
+      <div className="h-[70px] flex items-center flex-col justify-evenly w-full">
+        <h1 className="text-xs font-medium">
+          @ 2025 YADAV ENTERPRISES | DESIGN & CRAFTED By A2 DiGITAL
+        </h1>
+
+        <h1 className="text-xs font-medium">
+          Terms and Conditions & Privacy Policy
+        </h1>
       </div>
-    </footer>
+    </div>
   );
 };
 

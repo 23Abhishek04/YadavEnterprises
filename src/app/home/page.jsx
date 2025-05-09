@@ -1,5 +1,6 @@
 'use client';
 import HeroSection from "@/components/HeroSection";
+import LastSection from "@/components/LastSection";
 import Work from "@/components/Work";
 import React from 'react'
 
@@ -9,6 +10,7 @@ const home = () => {
  
  <HeroSection />
  <Work />
+ <LastSection/>
     </main>
 );
 }

@@ -1,37 +1,9 @@
+"use client";
 import React from "react";
-import Image from "next/image";
-import logo from "../images/logo3.jpg";
 
 const page = () => {
   return (
-    <div className="bg-[#191917] text-[#f3e9d0] flex flex-col items-center">
-      <Image
-        src={logo}
-        alt="Background"
-        quality={100}
-        className="h-[120px] w-auto"
-      />
-      <h1 className="mt-6 font-serif text-3xl">Elegant Ceilings.</h1>
-      <h1 className="font-serif text-3xl">Lasting Impressions.</h1>
-      <button className="flex items-center justify-center gap-1  h-[30px] w-[180px] text-xs font-mono bg-[#bb9e6b] text-[#ffffff] mt-6 rounded-sm">
-        <a>GET A FREE ESTIMATE</a>
-      </button>
-
-      <div className="border-t border-[#bb9e6b] w-full h-auto mt-8 px-10 pt-5">
-        
-        <h1 className="mb-3 font-serif text-2xl ">Our Services</h1>
-        
-        <ul className="text-[10px] list-disc list-inside ">
-          <li className="mb-1">POP False Ceilings Design</li>
-          <li className="mb-1">Wail Moulding & Paneling</li>
-          <li className="mb-1">Decorative Cornices</li>
-          <li className="mb-1">Lighting Integration In Ceilings</li>
-          <li>Renovation & Custom Work</li>
-        </ul>
-        
-      </div>
-      
-      <div className="bg-[#191917] text-[#f3e9d0] px-4 py-10 w-full max-w-3xl mx-auto border-t border-[#bb9e6b] mt-8">
+    <div className="bg-[#191917] text-[#f3e9d0] px-4 py-10 w-full max-w-3xl mx-auto">
       <h2 className="text-xl text-[#f5dfa5] font-mono mb-6 text-center">REQUEST A QUOTE</h2>
 
       <form
@@ -164,9 +136,7 @@ const page = () => {
         </button>
       </form>
       
-      
-    </div>
-      
+      <div className="h-[500px] w-full"></div>
     </div>
   );
 };

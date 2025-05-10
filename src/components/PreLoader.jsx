@@ -1,36 +1,47 @@
 'use client';
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import logo1 from './assets/1.png';
-import logo2 from './assets/2.png';
+import logo1 from './assets/logo1.png'
+import logo2 from './assets/logo2.png'
 
-const Preloader = () => {
-  const [startZoom, setStartZoom] = useState(false);
+export default function Preloader() {
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setStartZoom(true);
-    }, 1200); // Wait for 1.2s before zooming logos
+    const timeout = setTimeout(() => {
+      setHide(true);
+    }, 3000); // total animation duration
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#191917]">
-      <div className="relative flex items-center justify-center w-[300px] h-[300px]">
-        <div
-          className={`absolute ${startZoom ? 'animate-zoom-fade-out' : 'animate-slide-from-top'}`}
-        >
-          <Image src={logo1} alt="Logo 1" width={500} height={500} />
+    <div
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#151307] transition-opacity duration-500 ${
+        hide ? 'opacity-0 pointer-events-none' : ''
+      }`}
+    >
+      <div className="relative h-60 w-60">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Image
+            src={logo1}
+            alt="Logo 1"
+            width={120}
+            height={120}
+            className="animate-logoTop"
+          />
         </div>
-        <div
-          className={`absolute ${startZoom ? 'animate-zoom-fade-out' : 'animate-slide-from-bottom'}`}
-        >
-          <Image src={logo2} alt="Logo 2" width={500} height={500} />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Image
+            src={logo2}
+            alt="Logo 2"
+            width={120}
+            height={120}
+            className="animate-logoBottom"
+          />
         </div>
       </div>
     </div>
   );
-};
-
-export default Preloader;
+}

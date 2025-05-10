@@ -1,4 +1,3 @@
-// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -27,10 +26,21 @@ module.exports = {
           '0%, 70%': { transform: 'scale(1)', opacity: '1' },
           '100%': { transform: 'scale(2)', opacity: '0' },
         },
+        slideInRight: {
+          '0%': {
+            transform: 'translateX(-60%)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         popPulse: 'popPulse 1s ease-in-out infinite',
         mergeFade: 'mergefade 1s ease-in-out 1.2s forwards',
+        slideInRight: 'slideInRight 0.8s ease-out forwards',
       },
     },
   },

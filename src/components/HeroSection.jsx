@@ -1,21 +1,14 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className="bg-[#191917] w-full  h-[200px] flex flex-col pt-5 pl-3">
-      <h1 className="text-[#8f774d] font-[CarroisGothicSC-Regular] font-medium text-3xl">
-        ELEGANT CEILINGS.
-      </h1>
-      <h1 className="text-[#8f774d] font-[CarroisGothicSC-Regular] font-medium text-3xl">
-        LASTING IMPRESSIONS.
-      </h1>
-      <Link href="./quoteform" className=""><button className="text-[#f5dfa5] font-mono border border-[#f5dfa5] text-sm h-[40px] w-[180px] mt-5">
-        GET A FREE ESTIMATE
-      </button></Link>
+    <div className='bg-[#151307] w-full h-[200px] flex flex-col items-center justify-center font-serif'>
+      <h1 className='text-[#987b2d] text-xl'>Welcome To Vistara Ceilings & Walls</h1>
+      <h2 className='bg-[#987b2d] text-[#151307] rounded-md px-2 font-medium'>Built on Trust. Crafted with Precision.</h2>
+      
     </div>
-  );
-};
+    
+  )
+}
 
-export default HeroSection;
- 
+export default HeroSection

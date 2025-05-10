@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
-import Preloader from '@/components/Preloader';
+import Preloader from '@/components/PreLoader';
 
 export default function ClientLayout({ children }) {
   const [loading, setLoading] = useState(true);

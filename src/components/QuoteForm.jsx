@@ -8,7 +8,7 @@ export default function QuoteForm() {
   const estimatedPrice = Number(sqft) * ratePerSqft;
 
   return (
-    <div className="max-w-sm p-6 mx-auto mt-10 bg-white shadow-lg rounded-2xl">
+    <div className="max-w-sm p-6 mx-auto mt-10 shadow-lg bg-[#151307] rounded-2xl">
       <h2 className="mb-4 text-xl font-semibold text-center">Get Your Quote</h2>
       <label className="block mb-2 text-gray-700">Enter Area (sqft):</label>
       <input

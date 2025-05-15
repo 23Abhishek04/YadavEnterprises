@@ -1,7 +1,7 @@
 'use client';
 import HeroSection from "@/components/HeroSection";
 
-import Work from "@/components/QuoteForm";
+
 import React from 'react'
 
 const home = () => {
@@ -9,8 +9,7 @@ const home = () => {
     <main>
  
  <HeroSection />
- <Work />
- 
+  
     </main>
 );
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="bg-[#191917] text-[#f3e9d0] px-4 py-10 w-full max-w-3xl mx-auto">
+    <div className="bg-[#151307] text-[#f3e9d0] px-4 py-10 w-full max-w-3xl mx-auto">
       <h2 className="text-xl text-[#f5dfa5] font-mono mb-6 text-center">REQUEST A QUOTE</h2>
 
       <form

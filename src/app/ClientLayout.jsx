@@ -12,12 +12,11 @@ export default function ClientLayout({ children }) {
     return () => clearTimeout(timer);
   }, []);
 
-  return loading ? <Preloader /> : (
+  return loading ?  <Preloader />: (
     <>
       <Navbar />
       {children}
     </>
   );
 }
-// #f5dfa5
-// #191917
+

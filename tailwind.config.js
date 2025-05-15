@@ -8,14 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#E7452C', // Add your custom color here
+        primary: '#E7452C',
       },
       fontFamily: {
         maratSmallCaps: [
           '"CarroisGothicSC-Regular"',
           'sans-serif',
           'Marat Sans Medium Small Caps',
-        ], // Custom font
+        ],
       },
       keyframes: {
         popPulse: {
@@ -36,11 +36,16 @@ module.exports = {
             opacity: '1',
           },
         },
+        slide: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         popPulse: 'popPulse 1s ease-in-out infinite',
         mergeFade: 'mergefade 1s ease-in-out 1.2s forwards',
         slideInRight: 'slideInRight 0.8s ease-out forwards',
+        slide: 'slide 5s linear infinite', // 👈 added animation for client logos
       },
     },
   },

@@ -2,6 +2,7 @@
 import HeroSection from "@/components/HeroSection";
 
 
+
 import React from 'react'
 
 const home = () => {
@@ -9,6 +10,7 @@ const home = () => {
     <main>
  
  <HeroSection />
+
   
     </main>
 );

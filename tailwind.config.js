@@ -16,6 +16,7 @@ module.exports = {
           'sans-serif',
           'Marat Sans Medium Small Caps',
         ],
+        fredoka: ['var(--font-fredoka)', 'cursive'],
       },
       keyframes: {
         popPulse: {

@@ -15,7 +15,7 @@ export default function Navbar() {
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
 
   return (
-    <nav className="w-full h-[100px] bg-[#151307] text-[#987b2d] border-[#83681e] border-b-2">
+    <nav className="w-full h-[100px] bg-[#0E0D0A] text-[#987b2d] border-[#DDA325] border-b-2">
       <div className="relative flex items-center justify-center w-full h-[100px]">
         {/* Title Centered */}
 
@@ -77,6 +77,13 @@ export default function Navbar() {
               onClick={toggleMobileMenu}
             >
               CLIENT
+            </Link>
+            <Link
+              href="/FAQ"
+              className="hover:text-[#D4AF37] transition-colors duration-200"
+              onClick={toggleMobileMenu}
+            >
+              FAQ
             </Link>
             <Link
               href="/contactus"

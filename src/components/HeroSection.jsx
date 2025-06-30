@@ -1,18 +1,19 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
 import i1 from "./assets/i1.png";
 import i2 from "./assets/i2.png";
 import i3 from "./assets/i3.png";
 import i4 from "./assets/i4.png";
+import Slider from "./Slider";
+
 
 
 const HeroSection = () => {
   
 
   return (
-    <div className="bg-[#0E0D0A] w-full flex flex-col items-center h-screen text-white pt-10">
+    <div className="bg-[#0E0D0A] w-full flex flex-col items-center h-auto text-white pt-10">
       <span className="flex flex-col items-center w-full h-auto font-serif text-3xl ">
         <h1 className="">POP, That</h1>
         <h1 className="">Pops With Perfection!</h1>
@@ -93,7 +94,9 @@ const HeroSection = () => {
         </button>
       </Link>   
       
-      
+     <Slider/>
+     
+     <div className="h-[1000px] w-full"></div>
         
     </div>
   );

@@ -55,42 +55,64 @@ export default function Navbar() {
               className="hover:text-[#D4AF37] transition-colors duration-200"
               onClick={toggleMobileMenu}
             >
-              HOME
+              Home
             </Link>
             <Link
               href="/about"
               className="hover:text-[#D4AF37] transition-colors duration-200"
               onClick={toggleMobileMenu}
             >
-              ABOUT
+              About Us
             </Link>
             <Link
               href="/gallery"
               className="hover:text-[#D4AF37] transition-colors duration-200"
               onClick={toggleMobileMenu}
             >
-              GALLERY
-            </Link>
-            <Link
-              href="/client"
-              className="hover:text-[#D4AF37] transition-colors duration-200"
-              onClick={toggleMobileMenu}
-            >
-              CLIENT
+              Gallery
             </Link>
             <Link
               href="/FAQ"
               className="hover:text-[#D4AF37] transition-colors duration-200"
               onClick={toggleMobileMenu}
             >
-              FAQ
+              FAQ'S
+            </Link>
+
+            <Link
+              href="/client"
+              className="hover:text-[#D4AF37] transition-colors duration-200"
+              onClick={toggleMobileMenu}
+            >
+              Clients & Partners
+            </Link>
+            <Link
+              href="/customerguide"
+              className="hover:text-[#D4AF37] transition-colors duration-200"
+              onClick={toggleMobileMenu}
+            >
+              Customer Guide
             </Link>
             <Link
               href="/contactus"
               className="hover:text-[#D4AF37] transition-colors duration-200"
               onClick={toggleMobileMenu}
             >
-              CONTACT US
+              Photos & Videos
+            </Link>
+            <Link
+              href="/contactus"
+              className="hover:text-[#D4AF37] transition-colors duration-200"
+              onClick={toggleMobileMenu}
+            >
+              Designs For Properties
+            </Link>
+            <Link
+              href="/contactus"
+              className="hover:text-[#D4AF37] transition-colors duration-200"
+              onClick={toggleMobileMenu}
+            >
+              Contact Us
             </Link>
 
             <div className="flex gap-4 mt-4 text-xl">

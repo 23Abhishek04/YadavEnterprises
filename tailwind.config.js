@@ -46,13 +46,9 @@ module.exports = {
         popPulse: 'popPulse 1s ease-in-out infinite',
         mergeFade: 'mergefade 5s ease-in-out 1.2s forwards',
         slideInRight: 'slideInRight 0.2s ease-out forwards',
-        slide: 'slide 5s linear infinite', // 👈 added animation for client logos
+        slide: 'slide 20s linear infinite', // Adjusted for smoother, slower slide
       },
     },
   },
   plugins: [],
 };
-// popPulse: 'popPulse 1s ease-in-out infinite',
-//         mergeFade: 'mergefade 1s ease-in-out 1.2s forwards',
-//         slideInRight: 'slideInRight 0.8s ease-out forwards',
-//         slide: 'slide 5s linear infinite',

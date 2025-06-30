@@ -2,8 +2,9 @@
 import React from "react";
 
 import { useState } from "react";
-import CostEstimator from "./CostEstimator";
 import Form from "./Form";
+import CostEstimator from "./CostEstimator";
+
 
 const page = () => {
   const [sqft, setSqft] = useState("");
@@ -54,9 +55,11 @@ const page = () => {
         <div className="h-[3px] w-full border-[#DDA325] border-t"></div>
       </div>
 
-      <Form />
+      <Form/>
+      <CostEstimator/>
 
-      <CostEstimator />
+     
+      <div className="h-[1000px] w-full"></div>
 
       
     </div>

@@ -1,38 +1,20 @@
 "use client";
-import { useState } from "react";
 
-export default function ContactPage() {
+import React, { useState } from "react";
+
+const Form = () => {
+  const [selectedType, setSelectedType] = useState("");
   const [loading, setLoading] = useState(false);
-  const [selectedType, setSelectedType] = useState(""); // ✅ Fix added here
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    const formData = new FormData(e.target);
-    formData.append("access_key", "b266b8ba-ea6f-4bc0-a63d-1be80c5bb3a3");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    setLoading(false);
-
-    if (res.success) {
-      alert("Thank you! Your message has been sent.");
-      e.target.reset();
-      setSelectedType(""); // Optional: reset property selection
-    } else {
-      alert("Something went wrong. Please try again later.");
-    }
+    // Simulate submission logic
+    setTimeout(() => {
+      alert("Form submitted!");
+      setLoading(false);
+    }, 1000);
   };
 
   return (
@@ -124,7 +106,7 @@ export default function ContactPage() {
           />
         </div>
 
-        {/* Upload Note */}
+        {/* Upload Note
         <div className="flex flex-col items-center">
           <h1 className="text-[#DDA325] font-serif text-lg">
             Upload Your Home Layout or Design
@@ -143,7 +125,7 @@ export default function ContactPage() {
             }}
             className="mt-2 text-[#DDA325] file:cursor-pointer"
           />
-        </div>
+        </div> */}
 
         {/* Submit */}
         <div className="flex items-center justify-center w-full h-auto">
@@ -156,6 +138,8 @@ export default function ContactPage() {
           </button>
         </div>
       </form>
+
+      {/* WhatsApp Button */}
       <div className="flex items-center justify-center w-full h-auto">
         <a
           href="https://wa.me/919096405319"
@@ -173,4 +157,6 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+};
+
+export default Form;

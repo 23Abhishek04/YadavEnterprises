@@ -5,7 +5,6 @@ import { useState } from "react";
 import Form from "./Form";
 import CostEstimator from "./CostEstimator";
 
-
 const page = () => {
   const [sqft, setSqft] = useState("");
   const ratePerSqft = 75;
@@ -55,16 +54,12 @@ const page = () => {
         <div className="h-[3px] w-full border-[#DDA325] border-t"></div>
       </div>
 
-      <Form/>
-      <CostEstimator/>
+      <Form />
+      <CostEstimator />
 
-     
       <div className="h-[1000px] w-full"></div>
-
-      
     </div>
   );
 };
 
 export default page;
-

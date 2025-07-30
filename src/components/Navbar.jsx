@@ -93,20 +93,7 @@ export default function Navbar() {
             >
               Customer Guide
             </Link>
-            <Link
-              href="/contactus"
-              className="hover:text-[#D4AF37] transition-colors duration-200"
-              onClick={toggleMobileMenu}
-            >
-              Photos & Videos
-            </Link>
-            <Link
-              href="/contactus"
-              className="hover:text-[#D4AF37] transition-colors duration-200"
-              onClick={toggleMobileMenu}
-            >
-              Designs For Properties
-            </Link>
+            
             <Link
               href="/contactus"
               className="hover:text-[#D4AF37] transition-colors duration-200"
@@ -114,6 +101,7 @@ export default function Navbar() {
             >
               Contact Us
             </Link>
+           
 
             <div className="flex gap-4 mt-4 text-xl">
               <a href="https://www.instagram.com" target="_blank">
@@ -130,9 +118,6 @@ export default function Navbar() {
               </a>
             </div>
 
-            <button className="w-40 mt-4 font-bold text-[#ffffff] transition-colors duration-200 rounded-lg h-14 bg-[#987b2d] hover:bg-opacity-40">
-              Get a Quote
-            </button>
           </div>
         )}
       </div>

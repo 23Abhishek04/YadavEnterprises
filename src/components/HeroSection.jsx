@@ -1,12 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import bg from "./assets/bgimage.jpg";
-import vinod from "./assets/vinod.jpg";
+import vinod from "./assets/vinod.png";
 import Link from "next/link";
+import Form from "./Form";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <div className="w-full h-full  bg-[#0E0D0A] ">
+    <div className="w-full h-full  bg-[#efebe9] px-6">
       {/* BG Image */}
       <div className="relative w-full h-[400px] ">
         {/* Background Image */}
@@ -20,7 +25,7 @@ const HeroSection = () => {
         />
 
         {/* Text on Top */}
-        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center px-2 text-center text-white bg-black/60">
+        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center px-2 text-center text-white bg-black/50">
           <span className="flex flex-col items-center w-full h-auto mb-2 font-serif text-3xl font-medium">
             <h1 className="">POP, That</h1>
             <h1 className="">Pops With Perfection!</h1>
@@ -45,27 +50,10 @@ const HeroSection = () => {
       </div>
 
       {/* Services */}
-      <div className="w-full h-auto text-[#DDA325]  px-4 flex flex-col gap-5 py-5 bg-[#0E0D0A]  items-center border-[#DDA325] border-b">
-        <h1 className="font-serif text-2xl font-medium text-center">
+      <div className="w-full h-auto text-[#DDA325]  px-4 flex flex-col gap-5 py-5   items-center ">
+        <h1 className="font-serif text-2xl font-semibold text-center text-[#6d4c41] ">
           Our Services
         </h1>
-        <div className="h-[350px] w-[320px] bg-[#0E0D0A] rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md border border-[#c4a245]">
-          <Image
-            src={bg}
-            alt="Background"
-            quality={100}
-            className="w-full h-auto rounded-t-xl"
-          />
-          <div className="w-[320px] text-center h-1/2 rounded-b-xl px-3">
-            <h1 className="mt-4 font-serif text-xl font-semibold">
-              Custom POP Ceilings
-            </h1>
-            <p className="mt-2 text-sm">
-              Handcrafted plaster ceilings that bring elegance and character to
-              any space, with designs ranging from classic to contemporary.
-            </p>
-          </div>
-        </div>
         <div className="h-[350px] w-[320px] bg-white rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md">
           <Image
             src={bg}
@@ -83,7 +71,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <div className="h-[350px] w-[320px] bg-[#0E0D0A] rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md border border-[#c4a245]">
+        <div className="h-[350px] w-[320px]  rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md border border-[#c4a245]">
           <Image
             src={bg}
             alt="Background"
@@ -91,10 +79,10 @@ const HeroSection = () => {
             className="w-full h-auto rounded-t-xl"
           />
           <div className="w-[320px] text-center h-1/2 rounded-b-xl px-3">
-            <h1 className="mt-4 font-serif text-xl font-semibold">
+            <h1 className="mt-4 font-serif text-xl font-semibold text-[#6d4d42]">
               Custom POP Ceilings
             </h1>
-            <p className="mt-2 text-sm">
+            <p className="mt-2 text-sm text-[#58433e]">
               Handcrafted plaster ceilings that bring elegance and character to
               any space, with designs ranging from classic to contemporary.
             </p>
@@ -103,9 +91,11 @@ const HeroSection = () => {
       </div>
 
       {/* Gallery */}
-      <div className="w-full h-auto text-[#DDA325] mt-5 px-4 flex flex-col gap-5 py-5 bg-[#0E0D0A]  items-center border-[#DDA325] border-b">
-        <h1 className="font-serif text-2xl font-medium text-center">Gallery</h1>
-        <div className="relative h-[250px] w-[350px] bg-[#0E0D0A] rounded-xl border border-[#c4a245] overflow-hidden group cursor-pointer">
+      <div className="w-full h-auto text-[#DDA325] mt-5 px-3 flex flex-col gap-5 py-5   items-center bg-white">
+        <h1 className="font-serif text-2xl font-semibold text-center">
+          Gallery
+        </h1>
+        <div className="relative h-[220px] w-[320px]  rounded-xl border border-[#c4a245] overflow-hidden group cursor-pointer">
           {/* Background Image */}
           <Image
             src={bg}
@@ -124,7 +114,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <div className="relative h-[250px] w-[350px] bg-[#0E0D0A] rounded-xl border border-[#c4a245] overflow-hidden group cursor-pointer">
+        <div className="relative h-[220px] w-[320px]  rounded-xl border border-[#c4a245] overflow-hidden group cursor-pointer">
           {/* Background Image */}
           <Image
             src={bg}
@@ -146,25 +136,26 @@ const HeroSection = () => {
       </div>
 
       {/* About */}
-      <div className="flex flex-col items-center w-full h-auto gap-4 border-b border-[#DDA325] py-7 text-pretty px-5">
-        <h1 className="text-[#DDA325] font-serif text-2xl font-light">
+      <div className="flex flex-col items-center w-full h-auto gap-4 px-5 py-7 text-pretty">
+        <h1 className="text-[#6d4d42] font-serif text-2xl font-semibold">
           About Yadav Enterprises
         </h1>
+
         <Image
           src={vinod}
           alt="Background"
           quality={100}
           className="h-[500px] w-[300px]"
         />
-        
-        <p className="text-white">
+
+        <p className="text-[#6d4d42]">
           At Yadav Enterprises, We Bring Over 20+ Years Of Expertise In Crafting
           High-quality False Ceiling And Wall Finishing Solutions. With Over
           2000+ Successful Residential And Commercial Projects, Our Work
           Seamlessly Blends Modern Design Expert Craftsmanship And Long-lasting
           Quality.
         </p>
-        <p className="text-white">
+        <p className="text-[#6d4d42]">
           From Elegant Pop Ceilings To Innovative Wall Panels, We Craft
           Interiors That Are Both Beautiful And Functional, Tailored To Your
           Lifestyle. Our Designs Enhance Natural Light, Suit All Generations,
@@ -172,13 +163,79 @@ const HeroSection = () => {
           Budget.
         </p>
         <Link href="./about" className="">
-          <button className="flex items-center justify-center gap-1  h-[45px] w-[200px] text-lg mt-3 bg-[#DDA325]  rounded-lg  font-serif backdrop-blur-md font-medium">
+          <button className="flex items-center justify-center gap-1  h-[45px] w-[200px] text-lg mt-3 bg-[#6d4c41]  rounded-lg  font-serif backdrop-blur-md font-medium text-white">
             <p>Learn More</p>
           </button>
         </Link>
       </div>
 
-      <div className="h-[1000px] w-full bg-[#0E0D0A]"></div>
+      {/* Contact Us */}
+      <div className="flex flex-col px-5 py-5 bg-white" >
+        <h1 className="font-serif text-[#6d4d42] font-semibold text-2xl text-center mb-8">
+          Contact
+        </h1>
+
+        <div className="flex flex-col gap-5 mb-10">
+          <span className="flex  text-[#6d4c41] gap-2 items-center">
+            <a className="text-xl ">
+              <FaLocationDot />
+            </a>
+            <span className="flex flex-col ">
+              <p className="text-sm font-medium">
+                GoodWill Park, New Sangavi,
+              </p>
+              <p className="text-sm font-medium">
+                Pune, Maharashtra 
+              </p>
+            </span>
+          </span>
+          <span className="flex  text-[#6d4c41] gap-2 items-center">
+            <a className="text-xl ">
+              <FaPhoneAlt />
+            </a>
+            <span className="flex flex-col ">
+              <p className="text-sm font-medium">
+                +91 9325574329
+              </p>
+              <p className="text-sm font-medium">
+                Mon-Fri,9:00Am-6:00PM
+              </p>
+            </span>
+          </span>
+          <span className="flex  text-[#6d4c41] gap-2 items-center">
+            <a className="text-xl ">
+              <IoIosMail />
+            </a>
+            <span className="flex flex-col ">
+              <p className="text-sm font-medium">
+                randommain.com
+              </p>
+              <p className="text-sm font-medium">
+                Inquiries & Appointments
+              </p>
+            </span>
+          </span>
+          <span className="flex  text-[#6d4c41] gap-2 items-center">
+            <a className="text-xl ">
+              <FaCalendarAlt />
+            </a>
+            <span className="flex flex-col ">
+              <p className="text-sm font-medium">
+                Consultations by appointment
+              </p>
+              <p className="text-sm font-medium">
+                Virtual options available
+              </p>
+            </span>
+          </span>
+         
+        </div>
+
+        <Form />
+        
+      </div>
+
+      
     </div>
   );
 };

@@ -15,7 +15,7 @@ export default function Navbar() {
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
 
   return (
-    <nav className="w-full h-[100px] bg-[#0E0D0A] text-[#987b2d] border-[#DDA325] border-b-2">
+    <nav className="w-full h-[85px]  text-[#987b2d]  flex items-center justify-center sticky top-0 z-50 bg-[#efebe9] bg-opacity-90">
       <div className="relative flex items-center justify-center w-full h-[100px]">
         {/* Title Centered */}
 
@@ -24,18 +24,18 @@ export default function Navbar() {
             src={logo1}
             alt="Background"
             quality={100}
-            className="h-[75px] w-[67px] mr-2 absolute"
+            className="h-[65px] w-[60px] mr-2 absolute"
           />
           <Image
             src={logo2}
             alt="Background"
             quality={100}
-            className="h-[75px] w-[67px] mr-2 "
+            className="h-[65px] w-[60px] mr-2 "
           />
 
           <span className="flex flex-col items-center animate-slideInRight">
-            <h1 className="font-serif text-3xl font-medium">VISTARA</h1>
-            <h1 className="font-mono text-xs font-medium">CEILINGS & WALLS</h1>
+            <h1 className="font-serif text-2xl font-semibold">YADAV</h1>
+            <h1 className="font-mono text-sm fontmedium">ENTERPISES</h1>
           </span>
         </div>
 

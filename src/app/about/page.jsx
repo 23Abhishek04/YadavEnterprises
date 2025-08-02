@@ -1,10 +1,46 @@
-import React from "react";
+"use client";
 
-const page = () => {
+import React from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.1,
+      ease: "easeOut",
+      duration: 0.6,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 6 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 0.5,
+    },
+  },
+};
+
+const Page = () => {
   return (
-    <div className="bg-[#0E0D0A] w-full flex flex-col h-auto text-white text-sm">
-      <div className="flex flex-col items-center w-full h-auto gap-4 border-b border-[#DDA325] py-7 text-pretty px-7">
-        <h1 className="text-[#DDA325] font-serif text-2xl font-light">
+    <motion.div
+      className="flex flex-col w-full h-auto text-sm text-[#6d4d42] bg-[#efebe9]"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div
+        className="flex flex-col items-center w-full h-auto gap-4 border-b border-[#DDA325] py-7 text-pretty px-7"
+        variants={childVariants}
+      >
+        <h1 className="font-serif text-2xl font-light ">
           About Yadav Enterprises
         </h1>
         <p>
@@ -21,33 +57,32 @@ const page = () => {
           And Elevate Everyday Living — All While Staying On Time And Within
           Budget.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col gap-3 py-5 px-7">
-        <h1 className="font-serif text-[#DDA325] text-center text-xl">
-          Our Core Values
-        </h1>
+      <motion.div
+        className="flex flex-col gap-3 py-5 px-7"
+        variants={childVariants}
+      >
+        <h1 className="font-serif text-xl text-center">Our Core Values</h1>
         <span className="flex flex-col">
-          <a className="font-light">✅Quality-first Approach</a>
-          <a className="font-light">✅Timely Completion</a>
-          <a className="font-light">✅Innovation In Design</a>
-          <a className="font-light">✅Skilled Workforce</a>
-          <a className="font-light">✅Clean & Safe Worksites</a>
-          <a className="font-light">✅Long-term Client Relationships</a>
+          <span className="font-light">✅ Quality-first Approach</span>
+          <span className="font-light">✅ Timely Completion</span>
+          <span className="font-light">✅ Innovation In Design</span>
+          <span className="font-light">✅ Skilled Workforce</span>
+          <span className="font-light">✅ Clean & Safe Worksites</span>
+          <span className="font-light">
+            ✅ Long-term Client Relationships
+          </span>
         </span>
 
-        <h1 className="font-serif text-[#DDA325] text-center text-xl">
-          Our Vision
-        </h1>
+        <h1 className="font-serif text-xl text-center">Our Vision</h1>
 
         <p>
           To Become The Most Trusted Name In Ceiling And Wall Solutions By
           Enhancing Every Space With Creativity, Comfort, And Quality.
         </p>
 
-        <h1 className="font-serif text-[#DDA325] text-center text-xl">
-          Our Mission
-        </h1>
+        <h1 className="font-serif text-xl text-center">Our Mission</h1>
 
         <p>
           To Deliver Innovative And Lasting Ceiling And Wall Solutions That
@@ -64,33 +99,36 @@ const page = () => {
           Corner Reflects Care And Creativity.
         </p>
 
-        <h1 className="font-serif text-[#DDA325] text-center text-xl">
-          Core Purpose
-        </h1>
+        <h1 className="font-serif text-xl text-center">Core Purpose</h1>
 
         <p>
           To Transform Ordinary Interiors Into Exceptional Spaces Adding Value
           To The Lives Of Our Customers, Teams, And Partners.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col w-full h-auto gap-3 py-5 border-t px-7 border-[#DDA325] mt-5">
-        <h1 className="font-serif text-[#DDA325] text-center text-3xl ">
+      <motion.div
+        className="flex flex-col w-full h-auto gap-3 py-5 border-t px-7 border-[#DDA325] mt-5"
+        variants={childVariants}
+      >
+        <h1 className="font-serif text-3xl text-center ">
           Board of Directors
         </h1>
-        <span className="flex flex-col">
-          <a>Harishankar Yadav</a>
-          <a>Founder & Director | Yadav Enterprises</a>
-        </span>
-        <span className="flex flex-col">
-          <a>Vinod Harishankar Yadav</a>
-          <a>CMO - Chief Marketing Officer | Yadav Enterprises</a>
-        </span>
-      </div>
-<div className="h-[1000px] w-full"></div>
-      
-    </div>
+        <div className="flex flex-col">
+          <span className="font-medium">Harishankar Yadav</span>
+          <span className="text-xs">
+            Founder & Director | Yadav Enterprises
+          </span>
+        </div>
+        <div className="flex flex-col mt-2">
+          <span className="font-medium">Vinod Harishankar Yadav</span>
+          <span className="text-xs">
+            CMO - Chief Marketing Officer | Yadav Enterprises
+          </span>
+        </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
-export default page;
+export default Page;

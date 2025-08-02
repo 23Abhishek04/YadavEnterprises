@@ -29,13 +29,13 @@ export default function Dropdown() {
   };
 
   return (
-    <div className="w-full h-[1000px] bg-[#0E0D0A]">
+    <div className="w-full h-[1000px] bg-[#efebe9]">
       {/* Heading */}
       <div className="w-full h-auto py-8 text-center">
-        <p className="text-[#DDA325] font-serif text-2xl">
+        <p className="text-[#6d4c41] font-serif text-2xl font-medium">
           Frequently Asked Questions
         </p>
-        <p className="text-[#DDA325] font-serif text-2xl">(FAQs)</p>
+        <p className="text-[#6d4c41] font-serif text-2xl">(FAQs)</p>
       </div>
 
       {/* Dropdown with Smooth Animation */}
@@ -43,17 +43,17 @@ export default function Dropdown() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center w-full h-auto border border-[#dda32552]"
+            className="flex flex-col items-center justify-center w-full h-auto border border-[#3e2723]"
           >
             <button
               onClick={() => toggleDropdown(index)}
-              className="w-full px-5 py-3 text-left text-white bg-[#0E0D0A]"
+              className="w-full px-5 py-3 text-left text-[#6d4c41] bg-[#efebe9]"
             >
               {faq.question}
             </button>
 
             <div
-              className={`transition-all duration-500 ease-in-out overflow-hidden w-full px-5 text-white bg-[#0E0D0A] border-t border-[#dda32552] ${
+              className={`transition-all duration-500 ease-in-out overflow-hidden w-full px-5 text-[#6d4c41] bg-[#efebe9] border-t border-[#3e2723] ${
                 openStates[index] ? "max-h-96 py-3" : "max-h-0 py-0"
               }`}
             >

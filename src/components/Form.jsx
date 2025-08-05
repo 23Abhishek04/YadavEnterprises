@@ -53,7 +53,7 @@ export default function Form({ to = "abhishekbamane23@gmail.com" }) {
   };
 
   return (
-    <div className="w-full mx-auto bg-white">
+    <div className="w-full mx-auto bg-white md:w-1/2">
       <form onSubmit={handleSubmit} noValidate className="space-y-4">
         {/* name */}
         <div>

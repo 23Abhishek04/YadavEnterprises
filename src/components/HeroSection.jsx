@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import bg from "./assets/bgimage.jpg";
-import vinod from "./assets/vinod.png";
 import Link from "next/link";
 import Form from "./Form";
 import { FaLocationDot } from "react-icons/fa6";
@@ -13,7 +12,7 @@ const HeroSection = () => {
   return (
     <div className="w-full h-full  bg-[#efebe9] px-6">
       {/* BG Image */}
-      <div className="relative w-full h-[400px] ">
+      <div className="relative w-full h-[400px] md:h-[630px]">
         {/* Background Image */}
         <Image
           src={bg}
@@ -25,12 +24,12 @@ const HeroSection = () => {
         />
 
         {/* Text on Top */}
-        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center px-2 text-center text-white bg-black/50">
+        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center px-2 text-center text-white bg-black/50 md:px-40">
           <span className="flex flex-col items-center w-full h-auto mb-2 font-serif text-3xl font-medium">
-            <h1 className="">POP, That</h1>
-            <h1 className="">Pops With Perfection!</h1>
+            <h1 className="md:text-5xl">POP, That</h1>
+            <h1 className="md:text-5xl">Pops With Perfection!</h1>
           </span>
-          <p className="text-xs ">
+          <p className="text-xs font-light md:text-lg">
             With over 20+ years of expertise, Yadav Enterprises has proudly
             transformed more than 2,000+ propertys With high-quality false
             ceiling solutions, we deliver craftsmanship, innovation, and trust
@@ -136,26 +135,20 @@ const HeroSection = () => {
       </div>
 
       {/* About */}
-      <div className="flex flex-col items-center w-full h-auto gap-4 px-5 py-7 text-pretty">
-        <h1 className="text-[#6d4d42] font-serif text-2xl font-semibold">
-          About Yadav Enterprises
-        </h1>
+      <div className="flex flex-col items-center w-full h-auto gap-4 px-5 py-7 text-pretty md:px-40">
+        <p className="flex text-center md:flex-col text-[#6d4d42] font-serif text-2xl font-semibold md:text-4xl gap-2">
+          <a>About</a>
+          <a>Yadav Enterprises</a>
+        </p>
 
-        <Image
-          src={vinod}
-          alt="Background"
-          quality={100}
-          className="h-[500px] w-[300px]"
-        />
-
-        <p className="text-[#6d4d42]">
+        <p className="text-[#6d4d42] md:text-lg md:font-medium">
           At Yadav Enterprises, We Bring Over 20+ Years Of Expertise In Crafting
           High-quality False Ceiling And Wall Finishing Solutions. With Over
           2000+ Successful Residential And Commercial Projects, Our Work
           Seamlessly Blends Modern Design Expert Craftsmanship And Long-lasting
           Quality.
         </p>
-        <p className="text-[#6d4d42]">
+        <p className="text-[#6d4d42] md:text-lg md:font-medium">
           From Elegant Pop Ceilings To Innovative Wall Panels, We Craft
           Interiors That Are Both Beautiful And Functional, Tailored To Your
           Lifestyle. Our Designs Enhance Natural Light, Suit All Generations,
@@ -170,72 +163,57 @@ const HeroSection = () => {
       </div>
 
       {/* Contact Us */}
-      <div className="flex flex-col px-5 py-5 bg-white" >
+      <div className="flex flex-col px-5 py-5 bg-white ">
         <h1 className="font-serif text-[#6d4d42] font-semibold text-2xl text-center mb-8">
           Contact
         </h1>
 
-        <div className="flex flex-col gap-5 mb-10">
-          <span className="flex  text-[#6d4c41] gap-2 items-center">
-            <a className="text-xl ">
-              <FaLocationDot />
-            </a>
-            <span className="flex flex-col ">
-              <p className="text-sm font-medium">
-                GoodWill Park, New Sangavi,
-              </p>
-              <p className="text-sm font-medium">
-                Pune, Maharashtra 
-              </p>
+        <div className="flex flex-col gap-4 md:px-20 lg:flex-row">
+          <div className="flex flex-col gap-5 mb-10 md:w-1/2">
+            <span className="flex  text-[#6d4c41] gap-2 items-center">
+              <a className="text-xl ">
+                <FaLocationDot />
+              </a>
+              <span className="flex flex-col ">
+                <p className="text-sm font-medium">
+                  GoodWill Park, New Sangavi,
+                </p>
+                <p className="text-sm font-medium">Pune, Maharashtra</p>
+              </span>
             </span>
-          </span>
-          <span className="flex  text-[#6d4c41] gap-2 items-center">
-            <a className="text-xl ">
-              <FaPhoneAlt />
-            </a>
-            <span className="flex flex-col ">
-              <p className="text-sm font-medium">
-                +91 9325574329
-              </p>
-              <p className="text-sm font-medium">
-                Mon-Fri,9:00Am-6:00PM
-              </p>
+            <span className="flex  text-[#6d4c41] gap-2 items-center">
+              <a className="text-xl ">
+                <FaPhoneAlt />
+              </a>
+              <span className="flex flex-col ">
+                <p className="text-sm font-medium">+91 9325574329</p>
+                <p className="text-sm font-medium">Mon-Fri,9:00Am-6:00PM</p>
+              </span>
             </span>
-          </span>
-          <span className="flex  text-[#6d4c41] gap-2 items-center">
-            <a className="text-xl ">
-              <IoIosMail />
-            </a>
-            <span className="flex flex-col ">
-              <p className="text-sm font-medium">
-                randommain.com
-              </p>
-              <p className="text-sm font-medium">
-                Inquiries & Appointments
-              </p>
+            <span className="flex  text-[#6d4c41] gap-2 items-center">
+              <a className="text-xl ">
+                <IoIosMail />
+              </a>
+              <span className="flex flex-col ">
+                <p className="text-sm font-medium">randommain.com</p>
+                <p className="text-sm font-medium">Inquiries & Appointments</p>
+              </span>
             </span>
-          </span>
-          <span className="flex  text-[#6d4c41] gap-2 items-center">
-            <a className="text-xl ">
-              <FaCalendarAlt />
-            </a>
-            <span className="flex flex-col ">
-              <p className="text-sm font-medium">
-                Consultations by appointment
-              </p>
-              <p className="text-sm font-medium">
-                Virtual options available
-              </p>
+            <span className="flex  text-[#6d4c41] gap-2 items-center">
+              <a className="text-xl ">
+                <FaCalendarAlt />
+              </a>
+              <span className="flex flex-col ">
+                <p className="text-sm font-medium">
+                  Consultations by appointment
+                </p>
+                <p className="text-sm font-medium">Virtual options available</p>
+              </span>
             </span>
-          </span>
-         
+          </div>
+          <Form />
         </div>
-
-        <Form />
-        
       </div>
-
-      
     </div>
   );
 };

@@ -87,6 +87,23 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+        <div className="h-[350px] w-[320px]  rounded-xl overflow-hidden transform transition duration-300 hover:scale-105 shadow-md border border-[#c4a245]">
+          <Image
+            src={bg}
+            alt="Background"
+            quality={100}
+            className="w-full h-auto rounded-t-xl"
+          />
+          <div className="w-[320px] text-center h-1/2 rounded-b-xl px-3">
+            <h1 className="mt-4 font-serif text-xl font-semibold text-[#6d4d42]">
+              Custom POP Ceilings
+            </h1>
+            <p className="mt-2 text-sm text-[#58433e]">
+              Handcrafted plaster ceilings that bring elegance and character to
+              any space, with designs ranging from classic to contemporary.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Gallery */}
@@ -132,12 +149,31 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
+         <div className="relative h-[220px] w-[320px]  rounded-xl border border-[#c4a245] overflow-hidden group cursor-pointer">
+          {/* Background Image */}
+          <Image
+            src={bg}
+            alt="Background"
+            quality={100}
+            className="object-cover w-full h-full transition duration-300 rounded-xl group-hover:scale-105"
+          />
+
+          {/* Blur Overlay + Text */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-10 text-center transition duration-300 opacity-0 bg-black/30 backdrop-blur-sm group-hover:opacity-100 rounded-xl">
+            <p className="mb-3 text-2xl font-semibold text-white transition duration-500 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+              Modern Classic
+            </p>
+            <p className="text-lg text-white transition duration-700 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+              Elegant two-tone POP design with hidden cove lighting
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* About */}
-      <div className="flex flex-col items-center w-full h-auto gap-4 px-5 py-7 text-pretty md:px-40">
-        <p className="flex text-center md:flex-col text-[#6d4d42] font-serif text-2xl font-semibold md:text-4xl gap-2">
-          <a>About</a>
+      <div className="flex flex-col items-center w-full h-auto gap-4 px-3 py-7 text-pretty md:px-40">
+        <p className="flex text-center flex-col text-[#6d4d42] font-serif text-2xl font-semibold md:text-4xl md:gap-2">
+          <a >About</a>
           <a>Yadav Enterprises</a>
         </p>
 
@@ -219,3 +255,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+//estimate page color change karycha 
+// FAQ add karaychet
+//Gallery Page

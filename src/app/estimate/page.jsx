@@ -31,17 +31,17 @@ const page = () => {
   };
 
   return (
-    <div className="bg-[#0E0D0A] flex flex-col items-center">
-      <span className="flex flex-col items-center w-full h-auto mt-6 font-serif text-3xl text-white">
+    <div className="bg-[#efebe9] flex flex-col items-center">
+      <span className="flex flex-col items-center w-full h-auto mt-6 font-serif text-3xl text-[#6d4d42]">
         <h1 className="">POP, That</h1>
         <h1 className="">Pops With Perfection!</h1>
       </span>
 
-      <h1 className="mt-2 font-serif text-3xl font-bold text-center text-white ">
+      <h1 className="mt-2 font-serif text-3xl font-bold text-center text-[#6d4d42] ">
         Get a Free Estimate
       </h1>
 
-      <div className="flex-row items-center justify-center mt-2 text-xs font-light text-center text-white">
+      <div className="flex-row items-center justify-center mt-2 text-xs font-light text-center text-[#6d4d42]">
         <h1>Tell us about your space and requirements,</h1>
         <h1>
           and let us create a personalized quotation that fits your needs
@@ -57,7 +57,7 @@ const page = () => {
       <Form />
       <CostEstimator />
 
-      <div className="h-[1000px] w-full"></div>
+     
     </div>
   );
 };
